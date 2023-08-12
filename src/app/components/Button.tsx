@@ -1,6 +1,4 @@
 'use client';
-
-import {Button} from "@mantine/core";
 import clsx from "clsx";
 
 interface ButtonProps {
@@ -9,17 +7,19 @@ interface ButtonProps {
 }
 
 
+
+
 export default function ButtonDefault(props: ButtonProps) {
     return (
-        <Button className={`${clsx(props.className, "rounded-full", 
-                            "bg-polkadot-rose", "text-white","font-body")}`}
-                variant="filled"
-                color="pink">
-            {props.text}
-        </Button>
-    )
+        <button className={`${clsx(props.className, "rounded-full",
+        "btn", "bg-polkadot-rose","text-white","hover:opacity-80 hover:bg-polkadot-rose")}`} >
+              {props.text}
+        </button>
+)
 
 
 
 
 }
+
+
