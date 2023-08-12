@@ -8,6 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
+      colors: {
+        'polkadot': {
+          'rose': '#E6007A',
+        },
+        'background': {
+          'secondary': '#252935',
+            'primary': '#191922',
+        }
+        ,
+      } ,
+        fontFamily: {
+        'title': ['"Roboto"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+          'background': ['Dancing Script', 'cursive'],
+        },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +31,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }
 export default config
