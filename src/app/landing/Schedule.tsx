@@ -21,8 +21,9 @@ export default function Schedule () {
                 <div className="flex flex-col mt-8 font-body gap-4">
                     <p>
                         Prepare-se para um mergulho profundo nessas palestras que definirão o futuro da blockchain.
-                        Não perca essa oportunidade no Blockchain Rio Festival 2023!
                     </p>
+                    <p>
+                        Não perca essa oportunidade no Blockchain Rio Festival 2023! </p>
 
                     <p>Confira
                         <Link href="https://blockchainfestival.io/"> aqui </Link>

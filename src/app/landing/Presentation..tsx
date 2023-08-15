@@ -18,7 +18,7 @@ export default function Presentation(props: PresentationProps) {
                     <p>Garanta aqui seu Passaporte Gratuito para o Futuro: A Blockchain Rio Festival te Espera! 🚀</p>
                 </div>
 
-                <ButtonDefault className="mb-10" text={"Garanta seu passaporte"}/>
+                <ButtonDefault className="mb-10" text={"Garanta seu passaporte"} link="#ticket"/>
 
 
 

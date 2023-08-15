@@ -4,6 +4,8 @@ import Logo from "@/app/landing/Logo";
 import Presentation from "@/app/landing/Presentation.";
 import Networking from "@/app/landing/Networking";
 import Schedule from "@/app/landing/Schedule";
+import Ticket from "@/app/landing/Ticket";
+
 
 
 export default function Landing() {
@@ -14,6 +16,8 @@ export default function Landing() {
             <Presentation />
             <Networking />
             <Schedule />
+            <Ticket />
+
         </Pagina>
     )
 
