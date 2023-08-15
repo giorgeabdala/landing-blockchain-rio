@@ -12,6 +12,7 @@ const tweetId = '1686736224172572672';
 interface TwitterModalProps {
     isOpen: boolean;
     setOpen: (value: boolean) => void;
+    nextStep: () => void;
 }
 
 export default function TwitterModal(props: TwitterModalProps) {
@@ -30,14 +31,16 @@ export default function TwitterModal(props: TwitterModalProps) {
 
             {props.isOpen && (
                 <Modal
+                    style={{overlay: {backgroundColor: 'rgba(0,0,0,0.4)'}}}
                     isOpen={props.isOpen}
                     onRequestClose={closeModal}
-                    className="fixed inset-0 z-10 overflow-y-auto"
+                    className="fixed inset-0 z-10 overflow-y-auto "
                     aria-labelledby="modal-title"
                     role="dialog"
                     aria-modal="true"
+
                 >
-                    <div className="flex items-end bg-transparent justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+                    <div className="flex items-end  justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
                         <div className="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform rounded-lg shadow-xl bg-background-primary sm:my-8 sm:align-middle sm:max-w-md sm:w-full sm:p-6">
                             <div>
 
@@ -70,7 +73,7 @@ export default function TwitterModal(props: TwitterModalProps) {
                             </div>
 
                             <div className="flex items-center justify-center mt-5  sm:-mx-2">
-                                <TwitterButton closeModal={closeModal} tweetId={tweetId} />
+                                <TwitterButton closeModal={closeModal} tweetId={tweetId} nextStep={props.nextStep}/>
                             </div>
                         </div>
                     </div>

@@ -29,6 +29,7 @@ export default function FormModal(props: TwitterModalProps) {
 
             {props.isOpen && (
                 <Modal
+                    style={{overlay: {backgroundColor: 'rgba(0,0,0,0.4)'}}}
                     isOpen={props.isOpen}
                     onRequestClose={closeModal}
                     className="fixed inset-0 z-10 overflow-y-auto"
