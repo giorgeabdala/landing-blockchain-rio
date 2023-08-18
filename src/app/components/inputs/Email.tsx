@@ -1,6 +1,11 @@
 
 
-export default function Email() {
+interface EmailProps {
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export default function Email(props: EmailProps) {
     return (
         <div>
             <label htmlFor="email" className=" text-white font-body">Email</label>
@@ -14,7 +19,7 @@ export default function Email() {
             </svg>
         </span>
 
-                <input type="email" placeholder="joe@dot.com"
+                <input type="email" placeholder="joe@dot.com" value={props.value} onChange={props.onChange}
                        className="block w-full py-2.5 placeholder-gray-400/70  border  rounded-lg pl-11 pr-5 rtl:pr-11 rtl:pl-5 bg-gray-900 text-gray-300 border-gray-600 focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"/>
             </div>
         </div>

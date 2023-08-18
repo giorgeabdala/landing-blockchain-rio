@@ -1,11 +1,9 @@
 'use client'
 
-import React, {useEffect, useState} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import Modal from 'react-modal';
-import ButtonDefault from "@/app/components/Button";
 import TwitterButton from "@/app/components/TwitterButton";
-import TwitterEmbed from "@/app/components/TwitterEmbed";
-import {TwitterShareButton, TwitterTweetEmbed} from "react-twitter-embed";
+import {TwitterTweetEmbed} from "react-twitter-embed";
 
 const tweetId = '1686736224172572672';
 
@@ -44,11 +42,11 @@ export default function TwitterModal(props: TwitterModalProps) {
                         <div className="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform rounded-lg shadow-xl bg-background-primary sm:my-8 sm:align-middle sm:max-w-md sm:w-full sm:p-6">
                             <div>
 
-                                <TwitterTweetEmbed
-                                    tweetId={tweetId}
-                                />
-
-
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <TwitterTweetEmbed
+                                        tweetId={tweetId}
+                                    />
+                                </Suspense>
                                 <div className="flex flex-col mt-4 text-center gap-4">
                                     <h3 className=" leading-6 capitalize text-white font-bold" id="modal-title">
                                         Estamos quase lá...Siga os passos abaixo:
