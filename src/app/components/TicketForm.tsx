@@ -25,7 +25,7 @@ export default function TicketForm() {
     // Handle WhatsApp input change
     const handleWhatsAppChange = (e) => {
         const inputValue = e.target.value;
-        setWhats(inputValue);
+        setWhats(inputValue.replace(/\D/g, ""));
         const formattedValue = formatWhatsApp(inputValue);
         setFormattedWhats(formattedValue);
     };
@@ -37,8 +37,8 @@ export default function TicketForm() {
             }
         };
 
-        const user:User = {name: "teste", email: "dot@dot.com.br", birthday: new Date().toISOString(),
-            occupation:"teste", whatsapp:"41995691212", event: event};
+        const user:User = {name: name, email: email, birthday: new Date(birthday).toISOString(),
+            occupation:occupation, whatsapp: whats, event: event};
         const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/user', {
             method: 'POST',
             headers: {
@@ -52,11 +52,10 @@ export default function TicketForm() {
     }
 
     async function sendWhats() {
-        const phone =  "5541995691111";
         const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/whats', {
             method: 'POST', headers:
                 {'Content-Type': 'application/json'},
-            body: JSON.stringify(phone),
+            body: JSON.stringify(whats),
             cache: 'no-cache'
         },);
         if (!response.ok) console.log(response.statusText);

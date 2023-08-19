@@ -1,7 +1,7 @@
 import UserService from "@/app/api/infra/UserService";
 import {NextResponse} from "next/server";
 import WhatsAppNotificationServiceCodeChat from "@/app/api/infra/WhatsService";
-const message = "Hello World!";
+const message = "Parabens ganhou ingresso (alterar msg depois)!";
 export async function POST(req: Request, res: Response) {
         try {
                 console.log("/whats/route");
