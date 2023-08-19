@@ -14,7 +14,6 @@ import Footer from "@/app/landing/Footer";
 export default function Landing() {
     return (
         <Pagina className="flex flex-col text-white">
-            <ButtonDefault text={"teste"} link="/checkout" />
             <Header />
             <Logo />
             <Presentation />

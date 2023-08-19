@@ -3,7 +3,7 @@ import Card from "@/app/components/Card";
 
 export default function Workshops() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div id="workshop" className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="flex justify-center">
                 <Card
                     image={"/workshop.png"}

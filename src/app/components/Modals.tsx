@@ -8,7 +8,7 @@ import ButtonDefault from "@/app/components/Button";
 
 export default function Modals() {
     const [twitterModal, setTwitterModal] = useState(false);
-    const [formModal, setFormModal] = useState(true);
+    const [formModal, setFormModal] = useState(false);
     return (
         <div>
             <ButtonDefault

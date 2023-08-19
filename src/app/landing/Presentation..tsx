@@ -9,7 +9,7 @@ interface PresentationProps {
 export default function Presentation(props: PresentationProps) {
     return (
         <Area className="bg-transparent">
-            <div className={`flex flex-col items-center justify-center 
+            <div id="start" className={`flex flex-col items-center justify-center 
             text-2xl text-white font-title  gap-8`}>
                 <h2 className="text-zinc-400">Blockchain Rio 2023</h2>
                 <h2>12 a 14 de setembro</h2>

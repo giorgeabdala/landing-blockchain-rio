@@ -2,6 +2,8 @@ import Email from "@/app/components/inputs/Email";
 import Birthday from "@/app/components/inputs/Date";
 import ButtonDefault from "@/app/components/Button";
 import {useState} from "react";
+import {useRouter} from "next/navigation";
+import User from "@/app/api/dto/User";
 
 export default function TicketForm() {
     const [name, setName] = useState("");
@@ -10,35 +12,7 @@ export default function TicketForm() {
     const [formattedWhats, setFormattedWhats] = useState("");
     const [birthday, setBirthday] = useState("");
     const [occupation, setOccupation] = useState("");
-
-    const handleFormSubmit = async (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
-        const userObject = {
-            name,
-            email,
-            whatsapp: formattedWhats, // Use the formatted WhatsApp value
-            occupation,
-            birthday,
-            event: process.env.NEXT_PUBLIC_EVENT_ID,
-        };
-
-        try {
-            const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/user', {
-                // ... Your fetch configuration ...
-                body: JSON.stringify(userObject),
-            });
-
-            if (response.ok) {
-                // Navigate to the checkout page with the user object as a query parameter
-                router.push({
-                    pathname: "/checkout",
-                    query: { user: JSON.stringify(userObject) },
-                });
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    const router = useRouter();
 
     // Function to format WhatsApp number
     const formatWhatsApp = (input) => {
@@ -56,13 +30,54 @@ export default function TicketForm() {
         setFormattedWhats(formattedValue);
     };
 
+    async function storeUser() {
+        const event = {
+            connect: {
+                id: process.env.NEXT_PUBLIC_EVENT_ID
+            }
+        };
+
+        const user:User = {name: "teste", email: "dot@dot.com.br", birthday: new Date().toISOString(),
+            occupation:"teste", whatsapp:"41995691212", event: event};
+        const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(user),
+            cache: 'no-cache'
+        });
+        if (!response.ok)  console.log(response.statusText);
+        return response.ok;
+    }
+
+    async function sendWhats() {
+        const phone =  "5541995691111";
+        const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/whats', {
+            method: 'POST', headers:
+                {'Content-Type': 'application/json'},
+            body: JSON.stringify(phone),
+            cache: 'no-cache'
+        },);
+        if (!response.ok) console.log(response.statusText);
+        return response.ok;
+    }
+
+    async function handleFormSubmit(e: any) {
+        e.preventDefault();
+        if (await storeUser()) {
+            if (await sendWhats()) {
+                return router.push("/checkout/sucess");
+            }}
+        return router.push("/checkout/error");
+    }
 
 
     return (
         <section className="max-w-4xl p-6 mx-auto  rounded-md shadow-md bg-gray-800">
             <h2 className="text-lg font-semibold  text-white font-body">Preencha seus dados</h2>
 
-            <form onSubmit={handleFormSubmit}> {/* Use the handleFormSubmit function */}
+            <form onSubmit={handleFormSubmit}  method={"POST"}> {/* Use the handleFormSubmit function */}
                 <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                     <div>
                         <label className=" text-white font-body" htmlFor="name">Nome Completo</label>

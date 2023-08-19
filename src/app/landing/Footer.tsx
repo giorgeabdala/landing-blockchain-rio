@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <Area className="bg-transparent">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-20 mb-20">
+            <div id="footer" className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-20 mb-20">
                 <div id="contatos" className="flex flex-col gap-4 text-gray-400">
                     <h1 className="mt-2 text-2xl font-semibold  md:text-3xl text-polkadot-rose">Polkadot Brasil</h1>
                     <p>Uma frase qualquer</p>
