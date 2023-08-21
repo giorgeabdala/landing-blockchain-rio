@@ -1,12 +1,12 @@
 
-
-import { PrismaClient } from '@prisma/client'
 import User from "@/app/api/dto/User";
+import {PrismaClient} from "@prisma/client";
+
 const prisma = new PrismaClient()
 
 export default class UserService {
      async addUser(user: User) {
-        return await prisma.user.create({
+        return  prisma.user.create({
             data: {
                 name: user.name,
                 email: user.email,

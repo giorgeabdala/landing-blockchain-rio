@@ -1,4 +1,3 @@
-import UserService from "@/app/api/infra/UserService";
 import {NextResponse} from "next/server";
 import WhatsAppNotificationServiceCodeChat from "@/app/api/infra/WhatsService";
 const message = "Parabens ganhou ingresso (alterar msg depois)!";

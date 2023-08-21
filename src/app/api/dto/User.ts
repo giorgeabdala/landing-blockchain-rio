@@ -4,7 +4,7 @@ export default interface User {
     whatsapp: string,
     occupation: string,
     birthday: string,
-    event: string
+    event: object
 }
 
 
