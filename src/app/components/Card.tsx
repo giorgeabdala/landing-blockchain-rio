@@ -9,7 +9,7 @@ interface CardProps {
 export default function Card(props: CardProps) {
     return (
         <div data-theme="dark">
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-auto bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={props.image} alt={props.alt}
                          className="rounded-xl"/>
