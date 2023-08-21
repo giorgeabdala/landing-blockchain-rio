@@ -9,7 +9,7 @@ export default function Networking() {
         <Area className="bg-background-primary">
             <div className="flex flex-col items-center justify-center font-body text-justify text-2xl gap-8 mt-10 mb-20">
 
-                <div className="flex font-background text-white opacity-20 text-8xl">
+                <div className="flex font-background text-white opacity-20 text-7xl">
                     <p>Networking...</p>
                 </div>
 

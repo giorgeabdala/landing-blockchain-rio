@@ -11,7 +11,7 @@ export default function Schedule () {
         <Area className="flex bg-background-secondary gap-8 text-2xl text-justify font-body ">
 
             <div className="mb-20">
-                <div className="flex text-white items-center justify-center font-background opacity-20 text-8xl leading-relaxed ">
+                <div className="flex text-white items-center justify-center font-background opacity-20 text-7xl leading-relaxed ">
                     <h1>Imperdível...</h1>
                 </div>
                 <p className="">Confira as palestras exclusivas da Polkadot Brasil que vão rolar no Blockchain Rio Festival 2023:</p>
