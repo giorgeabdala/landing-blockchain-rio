@@ -1,6 +1,12 @@
 import {NextResponse} from "next/server";
 import WhatsAppNotificationServiceCodeChat from "@/app/api/infra/WhatsService";
-const message = "Parabens ganhou ingresso (alterar msg depois)!";
+const message = "Parabéns! Você acaba de ganhar 100% de desconto para um ingresso individual para o evento, faça sua inscrição no link abaixo:\n" +
+    "\n" +
+    "https://www.sympla.com.br/blockchain-rio__2065562?d=Polkadot_te_leva\n" +
+    "\n" +
+    "O Blockchain Festival é a porta de entrada para o epicentro da inovação digital, de 12 a 14 de setembro, no Rio de Janeiro você está convidado a se unir à vanguarda tecnológica, onde as mentes mais brilhantes se reúnem para dar forma ao futuro.\n" +
+    "\n" +
+    "Esperamos você lá!";
 export async function POST(req: Request, res: Response) {
         try {
                 console.log("/whats/route");
