@@ -2,8 +2,6 @@
 
 import React, {useEffect, useState} from 'react';
 import Modal from 'react-modal';
-import TwitterButton from "@/app/components/TwitterButton";
-import {TwitterShareButton, TwitterTweetEmbed} from "react-twitter-embed";
 import TicketForm from "@/app/components/TicketForm";
 
 const tweetId = '1686736224172572672';

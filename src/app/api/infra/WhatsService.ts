@@ -1,5 +1,4 @@
 import axios from "axios";
-import {Err, Ok, Result} from "ts-results";
 const API_URL = process.env.WHATS_API_URI || "http://127.0.0.1:8083/message/sendText/polkadotBrasil";
 const API_KEY = process.env.API_KEY;
 

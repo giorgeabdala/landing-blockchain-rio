@@ -1,4 +1,4 @@
-FROM node:18-alpine AS base
+FROM node:18.17.1-alpine3.18 AS base
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -23,9 +23,6 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm run build
-
-# If using npm comment out above and use below instead
-# RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner

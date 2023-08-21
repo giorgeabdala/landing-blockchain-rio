@@ -15,7 +15,7 @@ export default function TicketForm() {
     const router = useRouter();
 
     // Function to format WhatsApp number
-    const formatWhatsApp = (input) => {
+    const formatWhatsApp = (input: string) => {
         const cleanedInput = input.replace(/\D/g, ""); // Remove non-digit characters
         const countryCode = cleanedInput.slice(0, 2);
         const phoneNumber = cleanedInput.slice(2);
@@ -23,7 +23,7 @@ export default function TicketForm() {
     };
 
     // Handle WhatsApp input change
-    const handleWhatsAppChange = (e) => {
+    const handleWhatsAppChange = (e: any) => {
         const inputValue = e.target.value;
         setWhats(inputValue.replace(/\D/g, ""));
         const formattedValue = formatWhatsApp(inputValue);
@@ -31,11 +31,7 @@ export default function TicketForm() {
     };
 
     async function storeUser() {
-        const event = {
-            connect: {
-                id: process.env.NEXT_PUBLIC_EVENT_ID
-            }
-        };
+        const event  = {connect: {id: process.env.NEXT_PUBLIC_EVENT_ID}};
 
         const user:User = {name: name, email: email, birthday: new Date(birthday).toISOString(),
             occupation:occupation, whatsapp: whats, event: event};

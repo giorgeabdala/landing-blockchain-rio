@@ -54,7 +54,7 @@ export default function TwitterModal(props: TwitterModalProps) {
 
                                     <div className="flex flex-col mt-2 text-justify text-white font-body gap-2">
                                         <p>
-                                            1 - Vamos causar um rebuliço no Twitter! Clique no botão "Retweet" abaixo e
+                                            1 - Vamos causar um rebuliço no Twitter! Clique no botão Retweet abaixo e
                                             compartilhe com seus amigos a novidade. 🚀
                                         </p>
                                         <p> 2 - Depois, volte correndo pra essa mesma aba
