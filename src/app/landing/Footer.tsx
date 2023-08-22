@@ -18,11 +18,11 @@ export default function Footer() {
 
                         <Link href="https://www.google.com/maps/place/EXPO+MAG/@-22.9118835,-43.2081586,15z/data=!4m2!3m1!1s0x0:0x539b0105727ec977?sa=X&ved=2ahUKEwj09aj8vbT_AhVdH7kGHT0CAukQ_BJ6BAhTEAg" >
                            <span className="inline-block p-3 text-polkadot-rose rounded-full bg-gray-800">
-                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                   stroke="currentColor" className="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
+                            <path strokeLinecap="round" strokeLinejoin="round"
                                   d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round"
+                            <path strokeLinecap="round" strokeLinejoin="round"
                                   d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
                         </svg>
                                 </span>
