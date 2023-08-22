@@ -1,11 +1,9 @@
-'use client'
 
 import React, {Suspense, useEffect, useState} from 'react';
 import Modal from 'react-modal';
 import TwitterButton from "@/app/components/TwitterButton";
 import {TwitterTweetEmbed} from "react-twitter-embed";
-
-const tweetId = '1686736224172572672';
+import TwitterEmbed from "@/app/components/TwitterEmbed";
 
 interface TwitterModalProps {
     isOpen: boolean;
@@ -14,10 +12,6 @@ interface TwitterModalProps {
 }
 
 export default function TwitterModal(props: TwitterModalProps) {
-
-    const openModal = () => {
-        props.setOpen(true);
-    };
 
     const closeModal = () => {
         props.setOpen(false);
@@ -41,12 +35,9 @@ export default function TwitterModal(props: TwitterModalProps) {
                     <div className="flex items-end  justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
                         <div className="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform rounded-lg shadow-xl bg-background-primary sm:my-8 sm:align-middle sm:max-w-md sm:w-full sm:p-6">
                             <div>
+                                <TwitterEmbed />
 
-                                <Suspense fallback={<div>Loading...</div>}>
-                                    <TwitterTweetEmbed
-                                        tweetId={tweetId}
-                                    />
-                                </Suspense>
+
                                 <div className="flex flex-col mt-4 text-center gap-4">
                                     <h3 className=" leading-6 capitalize text-white font-bold" id="modal-title">
                                         Estamos quase lá...Siga os passos abaixo:
@@ -71,7 +62,7 @@ export default function TwitterModal(props: TwitterModalProps) {
                             </div>
 
                             <div className="flex items-center justify-center mt-5  sm:-mx-2">
-                                <TwitterButton closeModal={closeModal} tweetId={tweetId} nextStep={props.nextStep}/>
+                                <TwitterButton closeModal={closeModal} nextStep={props.nextStep}/>
                             </div>
                         </div>
                     </div>

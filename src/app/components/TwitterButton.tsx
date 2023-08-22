@@ -3,14 +3,14 @@ import ButtonDefault from "@/app/components/Button";
 import FormModal from "@/app/components/FormModal"; // Import the FormModal component
 
 interface TwitterProps {
-    tweetId: string;
     closeModal: () => void;
     nextStep: () => void;
 }
 
+const tweetId = process.env.NEXT_PUBLIC_TWETTER_ID || '1';
 
 export default function TwitterButton(props: TwitterProps) {
-    const retweetLink = `https://twitter.com/intent/retweet?tweet_id=${props.tweetId}`;
+    const retweetLink = `https://twitter.com/intent/retweet?tweet_id=${tweetId}`;
     const [buttonText, setButtonText] = useState('Retweet');
     const [buttonClicked, setButtonClicked] = useState(false);
 
