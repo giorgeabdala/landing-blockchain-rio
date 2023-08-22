@@ -34,6 +34,7 @@ export default function FormModal(props: TwitterModalProps) {
                     aria-labelledby="modal-title"
                     role="dialog"
                     aria-modal="true"
+                    ariaHideApp={false}
                 >
                     <div className="flex items-end bg-transparent justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
                         <div className="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform rounded-lg shadow-xl bg-background-primary sm:my-8 sm:align-middle sm:max-w-md sm:w-full sm:p-6">
