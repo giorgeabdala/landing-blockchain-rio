@@ -1,5 +1,5 @@
 import Email from "@/app/components/inputs/Email";
-import Birthday from "@/app/components/inputs/Date";
+import DateInput from "@/app/components/inputs/DateInput";
 import ButtonDefault from "@/app/components/Button";
 import {useState} from "react";
 import {useRouter} from "next/navigation";
@@ -58,8 +58,9 @@ export default function TicketForm() {
         return response.ok;
     }
 
-    async function handleFormSubmit(e: any) {
+    async function handleFormSubmit(e:any) {
         e.preventDefault();
+        console.log("submit");
         if (await storeUser()) {
             if (await sendWhats()) {
                 return router.push("/checkout/sucess");
@@ -72,7 +73,7 @@ export default function TicketForm() {
         <section className="max-w-4xl p-6 mx-auto  rounded-md shadow-md bg-gray-800">
             <h2 className="text-lg font-semibold  text-white font-body">Preencha seus dados</h2>
 
-            <form onSubmit={handleFormSubmit}  method={"POST"}> {/* Use the handleFormSubmit function */}
+            <form onSubmit={handleFormSubmit}> {/* Use the handleFormSubmit function */}
                 <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                     <div>
                         <label className=" text-white font-body" htmlFor="name">Nome Completo</label>
@@ -103,13 +104,14 @@ export default function TicketForm() {
                                className="block bg-gray-900 w-full px-4 py-2 mt-2   border  rounded-md  text-gray-300 border-gray-600 focus:ring-blue-300 focus:ring-opacity-40 focus:border-blue-300 focus:outline-none focus:ring"/>
                     </div>
 
-                    <Birthday  value={birthday} onChange={(e) => setBirthday(e.target.value)}/>
+                    <DateInput value={birthday} onChange={(e) => setBirthday(e.target.value)}/>
                 </div>
 
                 <div className="flex justify-end mt-6">
 
                     <div className="flex justify-end mt-6">
-                        <ButtonDefault type="submit" text={"Enviar"} /> {/* Use type="submit" */}
+                        <ButtonDefault type={"submit"} text={"Enviar"} /> {/* Use type="submit" */}
+
                     </div>
                 </div>
             </form>

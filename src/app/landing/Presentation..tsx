@@ -1,5 +1,6 @@
 import Area from "@/app/components/Area";
 import ButtonDefault from "@/app/components/Button";
+import Link from "next/link";
 
 interface PresentationProps {
     className?: string
@@ -19,7 +20,9 @@ export default function Presentation(props: PresentationProps) {
                 </div>
 
 
-                <ButtonDefault className="mb-10" text={"Garanta seu passaporte"} link="#ticket"/>
+                <Link href="#ticket">
+                <ButtonDefault className="mb-10" text={"Garanta seu passaporte"} />
+                </Link>
 
 
 

@@ -8,7 +8,6 @@ interface TwitterProps {
     nextStep: () => void;
 }
 
-const linkSimpla = "https://www.sympla.com.br/blockchain-rio__2065562?d=Polkadot_te_leva";
 
 export default function TwitterButton(props: TwitterProps) {
     const retweetLink = `https://twitter.com/intent/retweet?tweet_id=${props.tweetId}`;
