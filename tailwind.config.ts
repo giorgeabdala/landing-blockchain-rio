@@ -20,8 +20,8 @@ const config: Config = {
         ,
       } ,
         fontFamily: {
-        'title': ['"Roboto"', 'sans-serif'],
-        'body': ['"Inter"', 'sans-serif'],
+        'title': ['"Unbounded"', 'cursive'],
+        'body': ['"Unbounded"', 'cursive'],
           'background': ['Dancing Script', 'cursive'],
         },
       backgroundImage: {

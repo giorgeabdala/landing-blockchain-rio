@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Schedule () {
     return (
-        <Area className="flex bg-background-secondary gap-8 text-2xl text-justify font-body ">
+        <Area className="flex bg-background-secondary gap-8 text-2xl text-justify font-body text-zinc-200">
 
             <div className="mb-20">
                 <div className="flex text-white items-center justify-center font-background opacity-20 text-7xl leading-relaxed ">

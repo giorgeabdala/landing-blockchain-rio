@@ -14,7 +14,7 @@ export default function Card(props: CardProps) {
                     <img src={props.image} alt={props.alt}
                          className="rounded-xl"/>
                 </figure>
-                <div className="card-body items-center text-center">
+                <div className="card-body items-center text-center text-white">
                     <h2 className="card-title">{props.title}</h2>
                     <p>{props.description}</p>
 

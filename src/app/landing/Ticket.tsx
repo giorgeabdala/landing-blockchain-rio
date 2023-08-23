@@ -13,7 +13,7 @@ export default function Ticket() {
             <div id="ticket" className="flex flex-col md:flex-row-reverse  lg:gap-12 items-center  justify-items-center  mt-20 mb-20 ">
                 <Image className="w-auto h-auto" src={"/festival-rio.webp"} alt={"logo da Blockchain Festival"} width={300} height={300} />
                 <div className="flex justify-center mt-20 md:mt-0 md:gap-4 ">
-                    <div className="flex flex-col  justify-center font-body text-justify text-2xl ">
+                    <div className="flex flex-col  justify-center font-body text-justify text-2xl text-zinc-100">
 
                         <p>
                             Garanta Seu Passaporte para a Blockchain Rio Festival 2023 e tenha a chance de
