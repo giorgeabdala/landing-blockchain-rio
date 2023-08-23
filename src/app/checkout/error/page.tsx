@@ -15,7 +15,7 @@ export default function checkout() {
                 <p>PARABÉNS!!!</p>
 
                 <div>
-                    Houve algum erro no processamento da sua solicitação. Por favor, procure os administradores da Polkadot Brasil pelo telegram ou no Discord"
+                    Houve algum erro no processamento da sua solicitação. Por favor, procure os administradores da Polkadot Brasil pelo telegram ou no Discord
                     </div>
 
             </div>
