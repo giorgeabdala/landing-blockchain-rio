@@ -11,10 +11,10 @@ export default function checkout() {
                 <Image src="/logo_transparent.png" alt="logotipo da comunidade Polkadot Brasil" width={500} height={500} />
                 <h1 className="text-2xl font-bold  font-title text-polkadot-rose md:text-4xl">POLKADOT BRASIL</h1>
             </div>
-            <div className="flex flex-col font-body items-center font-black text-justify mt-20 gap-8 text-lg text-white leading-loose">
+            <div className="flex flex-col font-body items-center font-black text-justify mt-20 gap-8 text-xl text-white leading-loose">
                 <p>PARABÉNS!!!</p>
 
-                <div>
+                <div className="font-normal">
                     Já reservamos seu passaporte para a incrível Blockchain Rio! Nos próximos momentos, você receberá uma mensagem via WhatsApp, trazendo as orientações detalhadas para a retirada do seu voucher.
                     </div>
                     <div>
