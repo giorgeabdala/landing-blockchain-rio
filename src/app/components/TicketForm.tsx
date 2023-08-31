@@ -12,6 +12,8 @@ export default function TicketForm() {
     const [formattedWhats, setFormattedWhats] = useState("");
     const [birthday, setBirthday] = useState("");
     const [occupation, setOccupation] = useState("");
+    const [displaySpinner, setDisplaySpinner] = useState(false);
+
     const router = useRouter();
 
     // Function to format WhatsApp number
@@ -59,6 +61,7 @@ export default function TicketForm() {
     }
 
     async function handleFormSubmit(e:any) {
+        setDisplaySpinner(true);
         e.preventDefault();
         console.log("submit");
         if (await storeUser()) {
@@ -110,7 +113,8 @@ export default function TicketForm() {
                 <div className="flex justify-end mt-6">
 
                     <div className="flex justify-end mt-6">
-                        <ButtonDefault type={"submit"} text={"Enviar"} /> {/* Use type="submit" */}
+                        <ButtonDefault type={"submit"} text={"Enviar"} disabled={displaySpinner} displaySpinner={displaySpinner}/>
+
 
                     </div>
                 </div>

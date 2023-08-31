@@ -1,12 +1,20 @@
 import {NextResponse} from "next/server";
 import WhatsAppNotificationServiceCodeChat from "@/app/api/infra/WhatsService";
-const message = "Parabéns! Você acaba de ganhar 100% de desconto para um ingresso individual para o evento, faça sua inscrição no link abaixo:\n" +
+const message = "\n" +
+    "Parabéns! Você acaba de ganhar 100% de desconto para um ingresso individual para o evento.\n" +
+    "Já fizemos a reserva do seu passaporte, mas para emitir o voucher ainda é necessário realizar seu cadastro no Sympla. \n" +
+    "Não se preocupe, esse é o último passo, tá?\n" +
     "\n" +
+    "Acesse o link abaixo, e no card de \"Inscrições\" selecione \"individual\". \n" +
+    "Preencha o formulário que irá aparecer e clique em finalizar.\n" +
     "https://www.sympla.com.br/blockchain-rio__2065562?d=Polkadot_te_leva\n" +
+    "\n" +
     "\n" +
     "O Blockchain Festival é a porta de entrada para o epicentro da inovação digital, de 12 a 14 de setembro, no Rio de Janeiro você está convidado a se unir à vanguarda tecnológica, onde as mentes mais brilhantes se reúnem para dar forma ao futuro.\n" +
     "\n" +
-    "Esperamos você lá!";
+    "Esperamos você lá! \n";
+
+
 export async function POST(req: Request, res: Response) {
         try {
                 console.log("/whats/route");
