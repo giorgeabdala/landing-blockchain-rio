@@ -1,3 +1,4 @@
+git pull
 docker stop blockchain-rio-landing
 docker rm blockchain-rio-landing
 docker build -t blockchain-rio-landing .
