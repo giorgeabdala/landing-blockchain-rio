@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Polkadot Brasil - Blockchain Rio 2023',
-  description: 'Landing page da Polkadot Brasil  para a blockchain rio 2023',
+  description: 'Polkadot Brasil  te leva para a Blockchain Rio 2023',
 }
 
 export default function RootLayout({
