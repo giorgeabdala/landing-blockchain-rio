@@ -10,11 +10,11 @@ export default function Schedule () {
     return (
         <Area className="flex bg-background-secondary gap-8 text-2xl text-justify font-body text-zinc-200">
 
-            <div className="mb-20">
-                <div className="flex text-white items-center justify-center font-background opacity-20 text-7xl leading-relaxed ">
+            <div className="mb-20 md:mt-10">
+                <div className="flex text-white items-center justify-center font-background opacity-20 text-7xl md:text-8xl lg:text-9xl leading-relaxed ">
                     <h1>Imperdível...</h1>
                 </div>
-                <p className="">Confira as palestras exclusivas da Polkadot Brasil que vão rolar no Blockchain Rio Festival 2023:</p>
+                <p className="md:mt-4">Confira as palestras exclusivas da Polkadot Brasil que vão rolar no Blockchain Rio Festival 2023:</p>
 
                 <Workshops />
 
