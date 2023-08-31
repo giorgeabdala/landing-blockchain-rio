@@ -22,7 +22,7 @@ const config: Config = {
         fontFamily: {
         'title': ['"Unbounded"', 'cursive'],
         'body': ['"Unbounded"', 'cursive'],
-          'background': ['Dancing Script', 'cursive'],
+          'background': ['Unbounded', 'cursive'],
         },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
