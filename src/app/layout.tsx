@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   title: 'Polkadot Brasil - Blockchain Rio 2023',
   description: 'Polkadot Brasil  te leva para a Blockchain Rio 2023',
     openGraph: {
-      images: 'opengraph-image.png',
+      images: '/opengraph-image.png',
     },
     twitter: {
-        images: 'twitter-image.png' ,
+        images: '/twitter-image.png' ,
     } ,
 }
 
