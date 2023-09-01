@@ -12,8 +12,6 @@ export default function checkout() {
                 <h1 className="text-4xl font-bold  font-title text-polkadot-rose ">POLKADOT BRASIL</h1>
             </div>
             <div className="flex flex-col font-body items-center font-black text-justify mt-20 gap-8 text-lg text-white">
-                <p>PARABÉNS!!!</p>
-
                 <div>
                     Houve algum erro no processamento da sua solicitação. Por favor, procure os administradores da Polkadot Brasil pelo telegram ou no Discord
                     </div>
