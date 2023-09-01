@@ -26,7 +26,7 @@ export default function Schedule () {
                         Não perca essa oportunidade no Blockchain Rio Festival 2023! </p>
 
                     <p>Confira
-                        <Link href="https://blockchainfestival.io/"> aqui </Link>
+                       <span className="text-polkadot-rose"> <Link href="https://blockchainfestival.io/"> aqui </Link> </span>
                         outras palestras que vão rolar no Blockchain Rio Festival 2023.</p>
 
                 </div>
