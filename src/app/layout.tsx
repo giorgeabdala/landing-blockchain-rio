@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         siteName: 'Polkadot Brasil',
       images: [
           {
-              url: 'https://polkadot.com.br/opengraph-image.png',
+              url: 'https://polkadot.com.br/twitter-image.png',
               width: 800,
               height: 600,
           },
@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        site: '@polkadot_brasil',
         title: 'Polkadot Brasil - Blockchain Rio 2023',
         description: 'Polkadot Brasil te leva para a Blockchain Rio 2023',
         images: ['https://polkadot.com.br/twitter-image.png'],
