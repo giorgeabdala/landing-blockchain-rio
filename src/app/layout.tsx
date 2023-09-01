@@ -7,6 +7,12 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Polkadot Brasil - Blockchain Rio 2023',
   description: 'Polkadot Brasil  te leva para a Blockchain Rio 2023',
+    openGraph: {
+      images: 'opengraph-image.png',
+    },
+    twitter: {
+        images: 'twitter-image.png' ,
+    } ,
 }
 
 export default function RootLayout({
