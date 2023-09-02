@@ -15,9 +15,9 @@ export default function Ticket() {
 
                         <p>
                             Garanta Seu Passaporte para a Blockchain Rio Festival 2023 e tenha a chance de
-                            estar no coração das discussões sobre blockchain, tecnologia e inovação.
+                            estar no coração das discussões sobre blockchain tecnologia e inovação.
                         </p>
-                        <p>Para obter seu passaporte, clique no botão abaixo e siga as instruções na próxima tela. </p>
+                        <p>Para obter seu passaporte clique no botão abaixo e siga as instruções na próxima tela. </p>
                         <div className="flex justify-center mt-8">
                             <Modals />
                         </div>

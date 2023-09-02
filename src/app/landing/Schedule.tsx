@@ -14,7 +14,7 @@ export default function Schedule () {
                 <div className="flex text-white items-center justify-center font-background opacity-10 font-black text-5xl md:text-8xl lg:text-9xl">
                     <h1>Imperdível...</h1>
                 </div>
-                <p className="mt-4">Confira as palestras exclusivas da Polkadot Brasil que vão rolar no Blockchain Rio Festival 2023:</p>
+                <p className="mt-4">Confira as palestras exclusivas da Polkadot Brasil que vão rolar na Blockchain Rio Festival 2023:</p>
 
                 <Workshops />
 
@@ -23,7 +23,7 @@ export default function Schedule () {
                         Prepare-se para um mergulho profundo nessas palestras que definirão o futuro da blockchain.
                     </p>
                     <p>
-                        Não perca essa oportunidade no Blockchain Rio Festival 2023! </p>
+                        Não perca essa oportunidade na Blockchain Rio Festival 2023! </p>
 
                     <p>Confira
                        <span className="text-polkadot-rose"> <Link href="https://blockchainfestival.io/"> aqui </Link> </span>
